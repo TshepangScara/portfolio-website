@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(which python *)",
+      "Read(//tmp/**)",
+      "Bash(which chromium-cli *)",
+      "Read(//c/Users/Tshep/.claude/**)",
+      "Bash(mkdir -p /c/Users/Tshep/AppData/Local/Temp/claude/c--Users-Tshep-OneDrive-Documents-Compukids-website-1-Porfolio-Website/e66b41b1-6929-4461-a038-c21667ff3bf2/scratchpad)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --screenshot=/c/Users/Tshep/AppData/Local/Temp/claude/c--Users-Tshep-OneDrive-Documents-Compukids-website-1-Porfolio-Website/e66b41b1-6929-4461-a038-c21667ff3bf2/scratchpad/about-light.png --window-size=1280,1400 file:///__TRACKED_VAR__)",
+      "Bash(node -c \"c:\\\\Users\\\\Tshep\\\\OneDrive\\\\Documents\\\\Compukids website 1\\\\Porfolio Website\\\\fragments.js\")",
+      "Bash(powershell -Command \"Get-Process -Name python,py -ErrorAction SilentlyContinue | Stop-Process -Force\")",
+      "Bash(taskkill //F //IM py.exe)",
+      "Bash(taskkill //F //IM python.exe)"
+    ]
+  }
+}

@@ -1151,6 +1151,12 @@ a.contact-card:hover {
     color: var(--text-primary);
 }
 
+.cv-role {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
 .cv-contact-line {
     color: var(--text-secondary);
     font-size: 0.9rem;

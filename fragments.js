@@ -108,6 +108,7 @@
 
         container = document.createElement('div');
         container.id = 'codeFragments';
+        container.setAttribute('aria-hidden', 'true'); // decorative only
         container.style.cssText = [
             'position:fixed',
             'inset:0',

@@ -47,19 +47,34 @@
 
     <!-- HERO SECTION -->
     <section class="hero" id="main-content">
-        <div class="hero-content">
-            <div class="avatar">TM</div>
-            <h1>Tshepang Molete</h1>
-            <p class="hero-role">QA Engineer &amp; Developer</p>
-            <p class="hero-subtitle">Build trust in software, from testing to reliable code</p>
-            <p class="hero-description">ISTQB-certified · JavaScript · Python · Selenium · Java</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Get in touch</a>
-                <a href="projects.html" class="btn btn-secondary">View work</a>
+        <div class="hero-content hero-grid">
+            <div class="hero-intro">
+                <div class="avatar">TM</div>
+                <h1>Tshepang Molete</h1>
+                <p class="hero-role">QA Engineer &amp; Developer</p>
+                <p class="hero-subtitle">Build trust in software, from testing to reliable code</p>
+                <p class="hero-description">ISTQB-certified · JavaScript · Python · Selenium · Java</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get in touch</a>
+                    <a href="projects.html" class="btn btn-secondary">View work</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://za.linkedin.com/in/tshepang-molete-106038239" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/TshepangScara" class="social-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://za.linkedin.com/in/tshepang-molete-106038239" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://github.com/TshepangScara" class="social-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+            <!-- TERMINAL: animated pytest run (see terminal.js) -->
+            <div class="terminal" id="heroTerminal" data-testid="hero-terminal">
+                <div class="terminal-bar">
+                    <span class="terminal-dot terminal-dot--red"></span>
+                    <span class="terminal-dot terminal-dot--amber"></span>
+                    <span class="terminal-dot terminal-dot--green"></span>
+                    <span class="terminal-title">tshepang@qa: ~/portfolio</span>
+                    <button class="terminal-rerun" id="terminalRerun" type="button" aria-label="Run the tests again">↻ re-run</button>
+                </div>
+                <p class="sr-only">A terminal showing a pytest run: five tests about Tshepang's QA skills, all passing.</p>
+                <pre class="terminal-body" id="terminalBody" aria-hidden="true"></pre>
             </div>
         </div>
     </section>
@@ -77,42 +92,29 @@
                     <p>From evaluating RNG certifications and payout logic to writing test automation with Selenium, I'm hands-on at every layer of the stack.</p>
                     <p>My growing focus is on test automation, CI/CD pipelines, and DevOps practices, bridging the gap between quality assurance and modern engineering workflows.</p>
 
-                    <div class="skills-grid-mini">
-                        <div class="skill-item">
-                            <span class="skill-icon" aria-hidden="true">🧪</span>
-                            <h4>QA</h4>
-                            <p>Core Discipline</p>
+                    <!-- Proof tiles: swap in your own numbers (years, jurisdictions, tests) -->
+                    <div class="stat-grid">
+                        <div class="stat-tile">
+                            <span class="stat-value">v4.0</span>
+                            <span class="stat-label">ISTQB CTFL certified</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-icon" aria-hidden="true">🎓</span>
-                            <h4>ISTQB</h4>
-                            <p>Certified Tester</p>
+                        <div class="stat-tile">
+                            <span class="stat-value">MT · UK +</span>
+                            <span class="stat-label">iGaming jurisdictions tested</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-icon" aria-hidden="true">💻</span>
-                            <h4>JavaScript</h4>
-                            <p>Primary Language</p>
+                        <div class="stat-tile">
+                            <span class="stat-value">pytest</span>
+                            <span class="stat-label">Selenium framework, built from scratch</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-icon" aria-hidden="true">⚙️</span>
-                            <h4>Selenium</h4>
-                            <p>WebDriver</p>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-icon" aria-hidden="true">🐍</span>
-                            <h4>Python</h4>
-                            <p>Test Automation</p>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-icon" aria-hidden="true">☕</span>
-                            <h4>Java</h4>
-                            <p>Currently Learning</p>
+                        <div class="stat-tile">
+                            <span class="stat-value">CI ✓</span>
+                            <span class="stat-label">This site runs its own test suite</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-photo">
                     <div class="profile-photo-wrap">
-                        <img src="WhatsApp Image 2026-03-25 at 19.51.31.jpeg" alt="Tshepang Molete" class="profile-photo" loading="lazy" decoding="async">
+                        <img src="tshepang-molete.jpg" alt="Tshepang Molete" class="profile-photo" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -152,10 +154,15 @@
 
     <!-- FOOTER -->
     <footer class="footer">
+        <a class="tested-badge" href="https://github.com/TshepangScara/portfolio-website/actions/workflows/site-tests.yml" target="_blank" rel="noopener noreferrer">
+            <span class="tested-dot" aria-hidden="true"></span>
+            This site is tested on every push · Playwright + pytest
+        </a>
         <p>&copy; 2026 Tshepang Molete. All rights reserved.</p>
     </footer>
 
     <script src="theme.js"></script>
+    <script src="terminal.js"></script>
     <script src="fragments.js"></script>
 </body>
 </html>
